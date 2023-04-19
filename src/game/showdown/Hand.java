@@ -5,7 +5,7 @@ import java.util.List;
 
 import static game.showdown.Showdown.MAX_HAND_CARD_SIZE;
 
-public class Hand {
+public class Hand extends game.Hand<Card> {
     private List<Card> cards = new ArrayList<>();
 
     public Hand() {
@@ -18,13 +18,13 @@ public class Hand {
         cards.add(card);
     }
 
-    public Integer getCardSize() {
+    public int getCardSize() {
         return cards.size();
     }
 
-    public List<Card> getCards() {
-        return cards;
-    }
+//    public List<Card> getCards() {
+//        return cards;
+//    }
 
     public void setCards(List<Card> cards) {
         this.cards = cards;

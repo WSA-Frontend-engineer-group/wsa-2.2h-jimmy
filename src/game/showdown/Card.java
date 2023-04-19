@@ -1,6 +1,6 @@
 package game.showdown;
 
-public class Card {
+public class Card extends game.Card{
 
     private Rank rank;
 
@@ -11,8 +11,8 @@ public class Card {
         this.suit = suit;
     }
 
-    public Integer getCardWeight() {
-        return (Rank.values().length * suit.ordinal()) + rank.ordinal() + 1;
+    public int getCardWeight() {
+        return (Suit.values().length * rank.ordinal()) + rank.ordinal();
     }
 
     public Rank getRank() {
@@ -22,8 +22,8 @@ public class Card {
     public Suit getSuit() {
         return suit;
     }
-
-    public String showCardInfo() {
+    @Override
+    public String toString() {
         return this.getSuit().name() + "-" + this.getRank().name();
     }
 }

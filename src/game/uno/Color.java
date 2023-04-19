@@ -1,4 +1,4 @@
-package game.umo;
+package game.uno;
 
 public enum Color {
     BLUE,

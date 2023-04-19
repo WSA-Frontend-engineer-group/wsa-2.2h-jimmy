@@ -1,24 +1,19 @@
-package game.umo;
+package game.uno;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static game.umo.Uno.MAX_HAND_CARD_SIZE;
-
-public class Hand {
+public class Hand extends game.Hand<Card> {
     private List<Card> cards = new ArrayList<>();
 
     public Hand() {
     }
 
     public void addCard(Card card) {
-        if (this.cards.size() >= MAX_HAND_CARD_SIZE) {
-            throw new IllegalStateException("Cannot add more card into hand.");
-        }
         cards.add(card);
     }
 
-    public Integer getCardSize() {
+    public int getCardSize() {
         return cards.size();
     }
 

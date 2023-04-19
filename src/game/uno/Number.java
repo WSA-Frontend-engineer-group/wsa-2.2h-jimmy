@@ -1,6 +1,6 @@
-package game.umo;
+package game.uno;
 
-public enum Rank {
+public enum Number {
     ONE,
     TWO,
     THREE,
